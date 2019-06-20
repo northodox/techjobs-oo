@@ -21,8 +21,11 @@ public class JobForm {
 
     @NotNull
     private int employerId;
+    @NotNull
     private int locationId;
+    @NotNull
     private int coreCompetencyId;
+    @NotNull
     private int positionTypeId;
 
     /*
