@@ -1,8 +1,6 @@
 package org.launchcode.controllers;
 
-import org.launchcode.models.Employer;
-import org.launchcode.models.Job;
-import org.launchcode.models.Location;
+import org.launchcode.models.*;
 import org.launchcode.models.forms.JobForm;
 import org.launchcode.models.data.JobData;
 import org.springframework.stereotype.Controller;
@@ -48,8 +46,13 @@ public class JobController {
         if(!errors.hasErrors()) {
 
             Employer empl = jobData.getEmployers().findById(jobForm.getEmployerId());
-            Location locale = jobData.getLocations().findById(jobForm.getLocationId())
+            Location locale = jobData.getLocations().findById(jobForm.getLocationId());
+            PositionType positype = jobData.getPositionTypes().findById(jobForm.getPositionTypeId());
+            CoreCompetency corecomp = jobData.getCoreCompetencies().findById(jobForm.getCoreCompetencyId());
+
+            Job newJob = new Job(jobForm.getName(), empl, locale, positype, corecomp);
             jobData.add(newJob);
+
             return "redirect:?id=" + newJob.getId();
         }
         else{
