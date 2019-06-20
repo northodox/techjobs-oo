@@ -49,7 +49,7 @@ public class JobForm {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
@@ -57,7 +57,7 @@ public class JobForm {
         return employerId;
     }
 
-    public void setEmployerId(int employerId) {
+    private void setEmployerId(int employerId) {
         this.employerId = employerId;
     }
 
@@ -65,7 +65,7 @@ public class JobForm {
         return employers;
     }
 
-    public void setEmployers(ArrayList<Employer> employers) {
+    private void setEmployers(ArrayList<Employer> employers) {
         this.employers = employers;
     }
 
@@ -73,7 +73,7 @@ public class JobForm {
         return locations;
     }
 
-    public void setLocations(ArrayList<Location> locations) {
+    private void setLocations(ArrayList<Location> locations) {
         this.locations = locations;
     }
 
@@ -81,7 +81,7 @@ public class JobForm {
         return coreCompetencies;
     }
 
-    public void setCoreCompetencies(ArrayList<CoreCompetency> coreCompetencies) {
+    private void setCoreCompetencies(ArrayList<CoreCompetency> coreCompetencies) {
         this.coreCompetencies = coreCompetencies;
     }
 
@@ -89,7 +89,7 @@ public class JobForm {
         return positionTypes;
     }
 
-    public void setPositionTypes(ArrayList<PositionType> positionTypes) {
+    private void setPositionTypes(ArrayList<PositionType> positionTypes) {
         this.positionTypes = positionTypes;
     }
 }
