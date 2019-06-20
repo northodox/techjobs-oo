@@ -21,6 +21,9 @@ public class JobForm {
 
     @NotNull
     private int employerId;
+    private int locationId;
+    private int coreCompetencyId;
+    private int positionTypeId;
 
     /*
         Included other fields needed to create a job,
@@ -28,13 +31,9 @@ public class JobForm {
         Don't forget to add getters and setters
      */
 
-    @NotNull
     private ArrayList<Employer> employers;
-    @NotNull
     private ArrayList<Location> locations;
-    @NotNull
     private ArrayList<CoreCompetency> coreCompetencies;
-    @NotNull
     private ArrayList<PositionType> positionTypes;
 
     public JobForm() {
@@ -80,6 +79,14 @@ public class JobForm {
         this.locations = locations;
     }
 
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
+    }
+
     public ArrayList<CoreCompetency> getCoreCompetencies() {
         return coreCompetencies;
     }
@@ -88,11 +95,27 @@ public class JobForm {
         this.coreCompetencies = coreCompetencies;
     }
 
+    public int getCoreCompetencyId() {
+        return coreCompetencyId;
+    }
+
+    public void setCoreCompetencyId(int coreCompetencyId) {
+        this.coreCompetencyId = coreCompetencyId;
+    }
+
     public ArrayList<PositionType> getPositionTypes() {
         return positionTypes;
     }
 
     public void setPositionTypes(ArrayList<PositionType> positionTypes) {
         this.positionTypes = positionTypes;
+    }
+
+    public int getPositionTypeId() {
+        return positionTypeId;
+    }
+
+    public void setPositionTypeId(int positionTypeId) {
+        this.positionTypeId = positionTypeId;
     }
 }
